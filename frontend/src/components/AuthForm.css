@@ -1,0 +1,139 @@
+/* General styling for the form container */
+.auth-form-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-form-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Header */
+.auth-form-container h2 {
+  text-align: center;
+  color: #2b3e50;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Styling for form elements */
+input,
+select,
+button {
+  width: 100%;
+  padding: 14px 16px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Input field styling */
+input[type="email"],
+input[type="text"],
+input[type="password"],
+select {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+/* Focused state for form elements */
+input:focus,
+select:focus,
+button:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+/* Button Styling */
+button {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: none;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Message text */
+p {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Link button for toggling login/register */
+button + button {
+  background-color: transparent;
+  color: #4CAF50;
+  border: none;
+  text-decoration: underline;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+button + button:hover {
+  color: #3e8e41;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  .auth-form-container {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .auth-form-container h2 {
+    font-size: 20px;
+  }
+
+  input,
+  select,
+  button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-form-container {
+    width: 80%;
+  }
+
+  .auth-form-container h2 {
+    font-size: 22px;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 15px;
+  }
+}

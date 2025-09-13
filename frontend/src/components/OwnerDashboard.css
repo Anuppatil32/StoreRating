@@ -1,0 +1,183 @@
+/* Owner Navbar */
+.owner-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2C3E50; /* Darker, more refined background */
+  padding: 10px 20px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.owner-navbar h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.owner-navbar-actions {
+  display: flex;
+  gap: 15px; /* Space between buttons */
+}
+
+.owner-navbar-actions button {
+  padding: 10px 20px;
+  background-color: #3498DB; /* Light blue button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.owner-navbar-actions button:hover {
+  background-color: #2980B9; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.owner-navbar-actions button.owner-logout-btn {
+  background-color: #E74C3C; /* Red for logout */
+}
+
+.owner-navbar-actions button.owner-logout-btn:hover {
+  background-color: #C0392B; /* Darker red on hover */
+}
+
+/* Owner Dashboard Section */
+.owner-dashboard-content {
+  padding: 20px;
+  background-color: #ECF0F1; /* Lighter background for a clean look */
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.owner-dashboard-content h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #34495E; /* Darker text for better readability */
+}
+
+/* Owner Ratings Section */
+.owner-ratings-summary {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.owner-ratings-summary h3 {
+  font-size: 20px;
+  color: #2C3E50; /* More neutral heading color */
+}
+
+.owner-ratings-summary span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2980B9; /* Blue for average rating */
+}
+
+/* Owner Ratings List */
+.owner-ratings-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.owner-ratings-list ul li {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #BDC3C7; /* Subtle border for list items */
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.owner-ratings-list ul li:hover {
+  background-color: #D5DBDB; /* Light hover effect */
+  transform: scale(1.02); /* Slightly scale on hover */
+}
+
+.owner-ratings-list div {
+  font-size: 16px;
+  color: #555;
+}
+
+.owner-ratings-list .rating-comment {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Owner Update Password Section */
+.owner-update-password {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.owner-update-password h3 {
+  font-size: 20px;
+  color: #2C3E50; /* Neutral heading color */
+}
+
+.owner-update-password input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #BDC3C7; /* Subtle border */
+}
+
+.owner-update-password button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498DB; /* Light blue button */
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.owner-update-password button:hover {
+  background-color: #2980B9; /* Darker blue on hover */
+}
+
+/* General Styles for Responsiveness */
+@media (max-width: 768px) {
+  .owner-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .owner-navbar-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .owner-dashboard-content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .owner-ratings-list ul {
+    padding: 0 10px;
+  }
+
+  .owner-dashboard-content {
+    padding: 15px;
+  }
+
+  .owner-update-password input,
+  .owner-update-password button {
+    width: 100%;
+  }
+}

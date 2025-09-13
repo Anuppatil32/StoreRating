@@ -1,0 +1,196 @@
+/* Admin Navbar */
+.admin-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2C3E50; /* Deep Navy Blue */
+  padding: 12px 24px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.admin-navbar h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-buttons button {
+  padding: 12px 20px;
+  background-color: #4A90E2; /* Soft Blue for primary buttons */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-buttons button:hover {
+  background-color: #357ABD; /* Slightly darker blue on hover */
+  transform: scale(1.05);
+}
+
+.nav-buttons button.logout-btn {
+  background-color: #E74C3C; /* Soft Red for logout */
+}
+
+.nav-buttons button.logout-btn:hover {
+  background-color: #C0392B; /* Darker red on hover */
+}
+
+/* Admin Dashboard Section */
+.dashboard-section {
+  padding: 24px;
+  background-color: #ECF0F1; /* Soft Light Gray */
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #34495E; /* Darker gray for heading */
+  font-weight: 600;
+}
+
+/* Dashboard Stats Cards */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.dashboard-stats .card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.dashboard-stats .card:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-stats .card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #2C3E50;
+}
+
+.dashboard-stats .card p {
+  font-size: 16px;
+  color: #7F8C8D;
+  margin: 10px 0;
+}
+
+.dashboard-stats .card .stat-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: #4A90E2;
+}
+
+.dashboard-stats .card .stat-value.secondary {
+  color: #E74C3C;
+}
+
+/* Form and Buttons */
+.dashboard-section form input,
+.dashboard-section form select,
+.dashboard-section form button {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 6px;
+  border: 1px solid #BDC3C7;
+  font-size: 16px;
+}
+
+.dashboard-section form button {
+  background-color: #4A90E2;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+
+.dashboard-section form button:hover {
+  background-color: #357ABD;
+}
+
+.dashboard-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dashboard-section ul li {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #BDC3C7;
+  margin: 12px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-section ul li:hover {
+  background-color: #D5DBDB; /* Light hover effect */
+}
+
+.user-details {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 6px;
+  margin-top: 20px;
+  border: 1px solid #BDC3C7;
+}
+
+.user-details h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #2C3E50;
+}
+
+/* General Styles for Responsiveness */
+@media (max-width: 768px) {
+  .admin-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-buttons {
+    width: 100%;
+  }
+
+  .dashboard-section {
+    padding: 16px;
+  }
+}
